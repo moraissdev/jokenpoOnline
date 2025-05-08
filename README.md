@@ -1,4 +1,4 @@
-<h1 align="center">JokenPô Online ✂️</h1>
+<h1 align="center">Jokenpô Online ✂️</h1>
 
 ###
 
