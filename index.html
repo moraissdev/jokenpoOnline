@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokenPô</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="wrapper">
+        <h1>JokenPô</h1>
+        <div class="options">
+            <button class="effect" id="stone" onclick="playHuman('stone')">&#x1F44A</button>
+            <button class="effect" id="paper" onclick="playHuman('paper')">&#x1f590</button>
+            <button class="effect" id="scissors" onclick="playHuman('scissors')">&#x270c</button>
+        </div>
+        <p id="messageAfterDraw"></p>
+        <h3 class="user">Sua Pontuação: <span id="userScore"> 0</span></h3>
+        <h3 class="house">Pontuação da Casa: <span id="houseScore"> 0</span></h3>
+        <button class="effect" id="clear">RESETAR PONTUAÇÃO</button>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>

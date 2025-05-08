@@ -1,0 +1,129 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(assets/backgroundGame.jpeg);
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    text-align: center;
+    background: white;
+    padding: 36px;
+    border-radius: 16px;
+    animation: slideIn 0.8s ease-out;
+}
+
+h1 {
+    font-size: 44px;
+    margin-bottom: 15px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0px 10px;
+    margin-bottom: 15px;
+}
+
+#stone {
+    background: rgb(123, 250, 123);
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 48px;
+    padding: 10px;
+}
+
+#paper {
+    background: rgb(96, 228, 255);
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 48px;
+    padding: 10px;
+}
+
+#scissors {
+    background: rgb(254, 127, 246);
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 48px;
+    padding: 10px;
+}
+
+#clear {
+    background: rgb(190 187 187);
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+#stone:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+#paper:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+#scissors:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+#clear:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.user {
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
+.house {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+#userScore {
+    color: blue;
+}
+
+#houseScore {
+    color: red;
+}
+
+#messageAfterDraw {
+    margin-bottom: 10px;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.effect {
+    transition: transform 0.8s ease-out;
+}
