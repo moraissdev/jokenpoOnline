@@ -22,8 +22,8 @@ let humanScore = 0
 let computerScore = 0
 function gameChoices(human, computer) {
     if (human == computer) {
-        humanScore += 1
-        computerScore += 1
+        humanScore += 0
+        computerScore += 0
         UserScorePlace.innerHTML = humanScore
         HouseScorePlace.innerHTML = computerScore
         messageAfterDraw.innerHTML = "A rodada empatou!"
@@ -33,7 +33,7 @@ function gameChoices(human, computer) {
         || human == 'scissors' && computer == 'paper') {
             humanScore += 1
             UserScorePlace.innerHTML = humanScore
-            messageAfterDraw.innerHTML = "Voce ganhou!"
+            messageAfterDraw.innerHTML = "Você venceu!"
     } else if (
         computer == 'stone' && human == 'scissors' 
         || computer == 'paper' && human == 'stone' 
@@ -41,8 +41,10 @@ function gameChoices(human, computer) {
     ) {
         computerScore += 1
         HouseScorePlace.innerHTML = computerScore
-        messageAfterDraw.innerHTML = "A casa ganhou!"
+        messageAfterDraw.innerHTML = "A casa venceu!"
     }
+    finishGame()
+    viewResetButton()
 }
 //////////////////////////////////////////////////
 function clearGame() {
@@ -51,5 +53,31 @@ function clearGame() {
         UserScorePlace.innerHTML = 0
         HouseScorePlace.innerHTML = 0
         messageAfterDraw.innerHTML = ''
+        viewResetButton()
     }
 buttonClearGame.addEventListener("click", clearGame)
+//////////////////////////////////////////////////
+function finishGame() {  
+    if (humanScore == 25) {
+    humanScore = 0
+    computerScore = 0
+    messageAfterDraw.innerHTML = `Você atingiu 25 pontos e ganhou!`
+    UserScorePlace.innerHTML = 0
+    HouseScorePlace.innerHTML = 0
+    } else if (computerScore == 25) {
+    humanScore = 0
+    computerScore = 0
+    messageAfterDraw.innerHTML = `A casa atingiu 25 pontos e ganhou!`
+    UserScorePlace.innerHTML = 0
+    HouseScorePlace.innerHTML = 0
+    }
+}
+//////////////////////////////////////////////////
+function viewResetButton() {
+    if (humanScore > 0 || computerScore > 0) {
+        buttonClearGame.style.display = 'block'
+        buttonClearGame.style.margin = 'auto'
+    } else if (humanScore == 0 && computerScore == 0) {
+        buttonClearGame.style.display = 'none'
+    }
+}
