@@ -2,7 +2,7 @@
 
 ###
 
-<p align="center">Criei esse mini projeto de Jokenpô para treinar o uso de funções e a geração de números aleatórios com o Math.random. A ideia foi fazer uma versão simples do jogo, onde o computador escolhe aleatoriamente entre pedra, papel ou tesoura, e o jogador faz a sua escolha. Foi uma forma divertida de praticar esses conceitos e melhorar meu entendimento sobre como usar funções e gerar resultados aleatórios de forma prática.</p>
+<p align="center">Desenvolvi esse mini projeto de Jokenpô para treinar o uso de funções e a geração de números aleatórios com o Math.random. A ideia foi fazer uma versão simples do jogo, onde o computador escolhe aleatoriamente entre pedra, papel ou tesoura, e o jogador faz a sua escolha. Foi uma forma divertida de praticar esses conceitos e melhorar meu entendimento sobre como usar funções e gerar resultados aleatórios de forma prática.</p>
 
 ###
 
