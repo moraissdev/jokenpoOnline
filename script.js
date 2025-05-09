@@ -11,6 +11,12 @@ const HouseScorePlace = document.getElementById("houseScore")
 const PlaceOfUserChoice = document.getElementById("userchoice")
 const PlaceOfComputerChoice = document.getElementById("computerchoice")
 //////////////////////////////////////////////////
+const  GAME_OPTIONS = {
+    STONE: 'stone',
+    PAPER: 'paper',
+    SCISSORS: 'scissors',
+}
+//////////////////////////////////////////////////
 function playHuman(humanChoice) {
     const computerChoice = playComputer()
     gameChoices(humanChoice, computerChoice)
@@ -18,7 +24,7 @@ function playHuman(humanChoice) {
 }
 //////////////////////////////////////////////////
 function playComputer() {
-    const choices = ['stone', 'paper', 'scissors']
+    const choices = [GAME_OPTIONS.STONE, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS]
     const randomChoice = Math.floor(Math.random() * 3)
     return choices[randomChoice]
 }
@@ -33,16 +39,16 @@ function gameChoices(human, computer) {
         HouseScorePlace.innerHTML = computerScore
         messageAfterDraw.innerHTML = "A rodada empatou!"
     } else if (
-        human == 'stone' && computer == 'scissors' 
-        || human == 'paper' && computer == 'stone' 
-        || human == 'scissors' && computer == 'paper') {
+        human == GAME_OPTIONS.STONE && computer == GAME_OPTIONS.SCISSORS 
+        || human == GAME_OPTIONS.PAPER && computer == GAME_OPTIONS.STONE 
+        || human == GAME_OPTIONS.SCISSORS && computer == GAME_OPTIONS.PAPER) {
             humanScore += 1
             UserScorePlace.innerHTML = humanScore
             messageAfterDraw.innerHTML = "Você venceu!"
     } else if (
-        computer == 'stone' && human == 'scissors' 
-        || computer == 'paper' && human == 'stone' 
-        || computer == 'scissors' && human == 'paper'
+        computer == GAME_OPTIONS.STONE && human == GAME_OPTIONS.SCISSORS 
+        || computer == GAME_OPTIONS.PAPER && human == GAME_OPTIONS.STONE
+        || computer == GAME_OPTIONS.SCISSORS && human == GAME_OPTIONS.PAPER
     ) {
         computerScore += 1
         HouseScorePlace.innerHTML = computerScore
@@ -93,31 +99,31 @@ function showTheChoices(human, computer) {
 
     const emojis = ['👊', '🖐️', '✌️']
 
-    if (human == 'stone' && computer == 'stone') {
+    if (human == GAME_OPTIONS.STONE && computer == GAME_OPTIONS.STONE) {
         PlaceOfUserChoice.innerHTML = emojis[0]
         PlaceOfComputerChoice.innerHTML = emojis[0]
-    } else if (human == 'stone' && computer == 'paper') {
+    } else if (human == GAME_OPTIONS.STONE && computer == GAME_OPTIONS.PAPER) {
         PlaceOfUserChoice.innerHTML = emojis[0]
         PlaceOfComputerChoice.innerHTML = emojis[1]
-    } else if (human == 'stone' && computer == 'scissors') {
+    } else if (human == GAME_OPTIONS.STONE && computer == GAME_OPTIONS.SCISSORS) {
         PlaceOfUserChoice.innerHTML = emojis[0]
         PlaceOfComputerChoice.innerHTML = emojis[2]
-    } else if (human == 'paper' && computer == 'stone') {
+    } else if (human == GAME_OPTIONS.PAPER && computer == GAME_OPTIONS.STONE) {
         PlaceOfUserChoice.innerHTML = emojis[1]
         PlaceOfComputerChoice.innerHTML = emojis[0]
-    } else if (human == 'paper' && computer == 'paper') {
+    } else if (human == GAME_OPTIONS.PAPER && computer == GAME_OPTIONS.PAPER) {
         PlaceOfUserChoice.innerHTML = emojis[1]
         PlaceOfComputerChoice.innerHTML = emojis[1]
-    } else if (human == 'paper' && computer == 'scissors') {
+    } else if (human == GAME_OPTIONS.PAPER && computer == GAME_OPTIONS.SCISSORS) {
         PlaceOfUserChoice.innerHTML = emojis[1]
         PlaceOfComputerChoice.innerHTML = emojis[2]
-    } else if (human == 'scissors' && computer == 'stone') {
+    } else if (human == GAME_OPTIONS.SCISSORS && computer == GAME_OPTIONS.STONE) {
         PlaceOfUserChoice.innerHTML = emojis[2]
         PlaceOfComputerChoice.innerHTML = emojis[0]
-    } else if (human == 'scissors' && computer == 'paper') {
+    } else if (human == GAME_OPTIONS.SCISSORS && computer == GAME_OPTIONS.PAPER) {
         PlaceOfUserChoice.innerHTML = emojis[2]
         PlaceOfComputerChoice.innerHTML = emojis[1]
-    } else if (human == 'scissors' && computer == 'scissors') {
+    } else if (human == GAME_OPTIONS.SCISSORS && computer == GAME_OPTIONS.SCISSORS) {
         PlaceOfUserChoice.innerHTML = emojis[2]
         PlaceOfComputerChoice.innerHTML = emojis[2]
     }
