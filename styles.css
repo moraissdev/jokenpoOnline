@@ -38,6 +38,14 @@ h1 {
     margin-bottom: 15px;
 }
 
+.changes {
+    margin-bottom: 4px;
+}
+
+#userchoice, #computerchoice {
+    font-size: 22px;
+}
+
 #stone {
     background: rgb(123, 250, 123);
     cursor: pointer;
