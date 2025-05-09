@@ -11,7 +11,7 @@ const HouseScorePlace = document.getElementById("houseScore")
 const PlaceOfUserChoice = document.getElementById("userchoice")
 const PlaceOfComputerChoice = document.getElementById("computerchoice")
 //////////////////////////////////////////////////
-const  GAME_OPTIONS = {
+const GAME_OPTIONS = { //ENUM
     STONE: 'stone',
     PAPER: 'paper',
     SCISSORS: 'scissors',
